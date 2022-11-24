@@ -26,4 +26,6 @@
 
     export const onGetTasks = (callback) => onSnapshot(collection(db, 'tasks'), callback);
 
+    export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
+
     
