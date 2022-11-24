@@ -22,4 +22,8 @@
     export const saveTask = (title, description) =>
     addDoc(collection(db, "tasks"), {title, description });
 
+    export const getTasks = () => getDocs(collection(db, 'tasks'));
+
+    export const onGetTasks = (callback) => onSnapshot(collection(db, 'tasks'), callback);
+
     
